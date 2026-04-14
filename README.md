@@ -1,4 +1,4 @@
-# Deina-Knowledge-Miner 
+# claw-Knowledge-Miner 
 
 **Status:** Active / YOLO-Mode  
 **Target Architecture:** Low-Spec Linux Servers (Optimized for Vaio/Laptop nodes)  
