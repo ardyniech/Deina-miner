@@ -1,0 +1,20 @@
+[Unit]
+Description=Deina Autonomous Agent - Claw Knowledge Miner
+After=network.target
+
+[Service]
+Type=simple
+# Path disesuaikan dengan environment OpenClaw yang aktif
+WorkingDirectory=/home/ardy/.openclaw/Deina-miner/core
+ExecStart=/bin/bash main.sh
+
+# Layer 1 Self-healing: Restart otomatis oleh OS jika script crash
+Restart=always
+RestartSec=30
+
+# Output diarahkan langsung ke file agar tidak membanjiri syslog server
+StandardOutput=append:/home/ardy/.openclaw/Deina-miner/logs/deina.log
+StandardError=append:/home/ardy/.openclaw/Deina-miner/logs/deina_error.log
+
+[Install]
+WantedBy=default.target
