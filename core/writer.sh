@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DB_PATH="../db/knowledge.db"
-LLAMA_PATH="/path/to/llama.cpp/main" # Sesuaikan path ini nanti
-MODEL_PATH="/path/to/model.gguf"    # Sesuaikan path ini nanti
+LLAMA_PATH="/home/ardy/llama.cpp/main" # Sesuaikan path ini nanti
+MODEL_PATH="/home/ardy/models/tinyllama-1.1b.Q4_K_M.gguf"    # Sesuaikan path ini nanti
 
 # Ambil 5 data unik terbaru untuk dijadikan bahan draf
 facts=$(sqlite3 "$DB_PATH" "SELECT clean_text FROM knowledge_archive ORDER BY id DESC LIMIT 5;")
